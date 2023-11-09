@@ -82,6 +82,7 @@
     git
     gnupg
     htop
+    iperf3
     iw
     jq
     lm_sensors
@@ -131,8 +132,8 @@
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 80 ];
-    allowedUDPPorts = [ 69 ];
+    allowedTCPPorts = [ 80 5201 ];
+    allowedUDPPorts = [ 69 5201 ];
   };
 
   system.copySystemConfiguration = true;
