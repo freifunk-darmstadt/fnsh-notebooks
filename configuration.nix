@@ -116,6 +116,18 @@
     libreoffice
   ];
 
+  users.motd = ''
+        · · · · · ·
+     · · · · · · ·
+     · · · · · Freifunk
+         · × · Darmstadt
+           · · ·
+
+         · · ·
+             ·
+  '';
+
+
   programs.ssh.extraConfig = ''
     Host 192.168.0.1 192.168.1.1 192.168.8.1 192.168.88.1 192.168.1.254 192.168.1.20 fd01:67c:2ed8:10*::1:1
       StrictHostKeyChecking no
