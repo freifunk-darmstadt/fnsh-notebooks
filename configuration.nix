@@ -78,6 +78,7 @@
     curl
     dmidecode
     ethtool
+    (import ./ffda-network-setup-mode.nix)
     git
     gnupg
     htop
