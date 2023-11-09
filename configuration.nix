@@ -23,7 +23,11 @@
 
   users.users.ffda = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "wireshark" ];
+    extraGroups = [
+      "wheel"
+      "wireshark"
+      "dialout"
+    ];
   };
 
   services.xserver = {
