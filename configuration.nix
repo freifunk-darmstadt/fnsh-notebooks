@@ -60,21 +60,58 @@
 
   
   environment.systemPackages = with pkgs; [
-    emacs-nox
+    # editors
+    nano
     vim
-    wget
-    tmux
-    ripgrep-all
-    ripgrep
-    picocom
-    git
-    firefox
+    emacs-nox
+
+    # gui editors
+    gnome3.gedit
+    jetbrains.pycharm-community
+    vscodium
+
+    # browsers
     chromium
+    firefox
+
+    # command line tools
+    curl
+    dmidecode
+    ethtool
+    git
+    gnupg
     htop
-    tcpdump
     iw
-    wireshark-qt
+    jq
+    lm_sensors
     magic-wormhole
+    mtr
+    pciutils
+    picocom
+    python3
+    ripgrep
+    ripgrep-all
+    tcpdump
+    tmate
+    tmux
+    usbutils
+    unzip
+    wget
+    whois
+    yq
+    zip
+
+    # gui system and debug tools
+    gparted
+    isoimagewriter
+    wireshark-qt
+
+    # media tools
+    mpv
+    vlc
+
+    # office tools
+    libreoffice
   ];
 
   services.atftpd = {
