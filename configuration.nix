@@ -114,6 +114,18 @@
 
     # office tools
     libreoffice
+
+    (pkgs.writeShellScriptBin "nixos-system-upgrade" ''
+      export PATH="${pkgs.git}/bin:${pkgs.nixos-rebuild}/bin:$PATH"
+      set -eo pipefail
+
+      sudo echo -n "git: "
+      sudo git -C /etc/nixos/ pull
+
+      sudo nixos-rebuild switch --upgrade
+
+      exit 0
+    '')
   ];
 
   users.motd = ''
