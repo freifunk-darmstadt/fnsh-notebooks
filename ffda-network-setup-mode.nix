@@ -24,7 +24,7 @@ stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/bin
-    cp a.out $out/bin/send-network-request
+    cp a.out $out/bin/ffda-network-setup-mode-send-request
   '';
 
   meta = with lib; {
