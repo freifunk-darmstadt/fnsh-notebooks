@@ -34,14 +34,14 @@
     enable = true;
     displayManager = {
       gdm.enable = true;
-      autoLogin = {
-        enable = true;
-	user = "ffda";
-      };
     };
     desktopManager.gnome.enable = true;
   };
-  
+
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "ffda";
+  }; 
 
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
@@ -66,7 +66,7 @@
     emacs-nox
 
     # gui editors
-    gnome3.gedit
+    gedit
     jetbrains.pycharm-community
     vscodium
 
