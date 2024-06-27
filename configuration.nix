@@ -48,6 +48,7 @@
     gnome-tour
   ]) ++ (with pkgs.gnome; [
     cheese # webcam tool
+    epiphany # Browser
     gnome-music
     geary # email reader
     gnome-characters
