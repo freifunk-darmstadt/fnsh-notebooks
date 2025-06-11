@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       ./local-config.nix
+      ./incus.nix
     ];
 
   programs.wireshark.enable = true;
@@ -31,49 +32,11 @@
     ];
   };
 
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      gdm.enable = true;
-    };
-    desktopManager.gnome.enable = true;
-  };
-
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "ffda";
-  }; 
-
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-    cheese # webcam tool
-    epiphany # Browser
-    gnome-music
-    geary # email reader
-    gnome-characters
-    totem # video player
-    tali # poker game
-    iagno # go game
-    hitori # sudoku game
-    atomix # puzzle game
-  ]);
-
-  
   environment.systemPackages = with pkgs; [
     # editors
     nano
     vim
     emacs-nox
-
-    # gui editors
-    gedit
-    jetbrains.pycharm-community
-    vscodium
-
-    # browsers
-    chromium
-    firefox
 
     # command line tools
     curl
@@ -104,18 +67,6 @@
     whois
     yq
     zip
-
-    # gui system and debug tools
-    gparted
-    isoimagewriter
-    wireshark-qt
-
-    # media tools
-    mpv
-    vlc
-
-    # office tools
-    libreoffice
 
     (pkgs.writeShellScriptBin "nixos-system-upgrade" ''
       export PATH="${pkgs.git}/bin:${pkgs.nixos-rebuild}/bin:$PATH"
@@ -189,4 +140,3 @@
 
   system.copySystemConfiguration = true;
 }
-
