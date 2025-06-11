@@ -1,2 +1,2 @@
 hardware-configuration.nix
-system-stateVersion.nix
+local-config.nix
