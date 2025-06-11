@@ -87,6 +87,7 @@
     jq
     lm_sensors
     magic-wormhole
+    man
     mtr
     pciutils
     picocom
